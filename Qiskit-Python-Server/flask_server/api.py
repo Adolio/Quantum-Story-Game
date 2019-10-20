@@ -28,8 +28,9 @@ def statevector(circuit_dimension, gate_string):
     return json_tricks.dumps(quantum_state)
 
 
-def measurement(circuit_dimension, gate_string, shot_num=1):
+def measurement(circuit_dimension, gate_string):
     circuit = circuit_from_string(circuit_dimension, gate_string)
+    shot_num = 1
 
     backend_sv_sim = BasicAer.get_backend('qasm_simulator')
     cr = ClassicalRegister(circuit.width())  # create classical register for each quantum register
