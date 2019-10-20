@@ -54,7 +54,7 @@ def do_measurement():
     print("--------------")
     print(gate_string)
 
-    reply = measurement(circuit_dimension, gate_string)
+    reply = measurement(circuit_dimension, gate_string, shot_num)
     return reply
 
 
