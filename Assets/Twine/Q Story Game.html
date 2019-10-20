@@ -11,35 +11,81 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Q Story Game" startnode="5" creator="Twine" creator-version="2.3.5" ifid="C8986571-FFAF-4181-A525-2E4BEE3758A3" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="LRH" tags="" position="300,200" size="200,100">The Wolf runs away before the villagers arrive.
+<tw-storydata name="Q Story Game" startnode="5" creator="Twine" creator-version="2.3.5" ifid="C8986571-FFAF-4181-A525-2E4BEE3758A3" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body 
+{
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+#logo
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+tw-story[tags~="Logo"] {
+  background-color: #FFFFFF;
+}
+
+tw-story[tags~="COVER"] {
+  background-image: url("images/cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+tw-story[tags~="COVER"] {
+  background-image: url("images/cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+tw-story[tags~="LRH"] {
+  background-image: url("images/forest.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+tw-story[tags~="PAW"] {
+  background-image: url("images/fence.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+tw-story[tags~="TLP"] {
+  background-image: url("images/pigs house.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="LRH" tags="LRH" position="300,200" size="200,100">The Wolf runs away before the villagers arrive.
 He finds a house in the midlle of the red forest.
 Through an open window he&#39;s able to overhear the mother asking Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
 The Wolf is hungry, so he decides to:
 
-[[Follow Red Hood|ForestLRH]]</tw-passagedata><tw-passagedata pid="2" name="ForestLRH" tags="" position="600,200" size="200,100">The Wolf intersects Red Hood in forest but before he had the oportunity to try anything she asks him what is the best route to get to the Grandmother&#39;s house. The wolf thinks for a second and then decides to: 
+[[Follow Red Hood|ForestLRH]]</tw-passagedata><tw-passagedata pid="2" name="ForestLRH" tags="LRH" position="600,200" size="200,100">The Wolf intersects Red Hood in forest but before he had the oportunity to try anything she asks him what is the best route to get to the Grandmother&#39;s house. The wolf thinks for a second and then decides to: 
 
 [[Let her know that the mushroom path is faster to get there. |GameOverRH]]
-[[Deceive her into following the flower path. Leading her on a longer path. |LongPath]]</tw-passagedata><tw-passagedata pid="3" name="LongPath" tags="" position="825,325" size="100,100">Litte Red Hood thanks the Wolf and gives him a matchbox.
+[[Deceive her into following the flower path. Leading her on a longer path. |LongPath]]</tw-passagedata><tw-passagedata pid="3" name="LongPath" tags="LRH" position="825,325" size="100,100">Litte Red Hood thanks the Wolf and gives him a matchbox.
 The Wolf realizes that she was a nice person and decides to:
 (set: $matchbox to true)
 
-[[Go back to Peter|Fence2]]</tw-passagedata><tw-passagedata pid="4" name="GranHouse" tags="" position="1400,200" size="100,100">The Wolf finally gets to this house which looks like Grandmother&#39;s House. He&#39;s not sure if she is in there, as the windows are closed and the door is locked. All this running back and forth has got him really tired. At last, he looks up and decides to go up the roof and:
+[[Go back to Peter|Fence2]]</tw-passagedata><tw-passagedata pid="4" name="GranHouse" tags="LRH" position="1400,200" size="100,100">The Wolf finally gets to this house which looks like Grandmother&#39;s House. He&#39;s not sure if she is in there, as the windows are closed and the door is locked. All this running back and forth has got him really tired. At last, he looks up and decides to go up the roof and:
 
 [[Enter the chimney.|InsideBrickHouse]] 50% needs revision
-[[Enter the chimney.|InsideGranHouse]] 50% needs revision</tw-passagedata><tw-passagedata pid="5" name="PAW" tags="" position="50,450" size="200,100">In the middle of the mountain, The Wolf is lying down on his stomach.
+[[Enter the chimney.|InsideGranHouse]] 50% needs revision</tw-passagedata><tw-passagedata pid="5" name="PAW" tags="PAW" position="50,450" size="200,100">In the middle of the mountain, The Wolf is lying down on his stomach.
 After spending the whole day chasing the Crane and the Goat without success, this hungry canine is also a lone outcast left to his own fate.
 - AAAUUUUUUUU! -, cries The Wolf
 Instead of keeping chasing other wild animals he decides to go to down to the village to go after the sheep that the villagers keep.
 
-[[START GAME|Fence1]]</tw-passagedata><tw-passagedata pid="6" name="TLP" tags="" position="300,700" size="200,100">The Wolf runs away before the villagers arrive.
+[[START GAME|Fence1]]</tw-passagedata><tw-passagedata pid="6" name="TLP" tags="TLP" position="300,700" size="200,100">The Wolf runs away before the villagers arrive.
 He finds a house in the midlle of the green forest.
 Through an open window he&#39;s able to overhear the Three Little Pigs talking about this party that they are setting. However two of the Little Pigs need to grab something from their homes.
 The Wolf is hungry, so he decides to: 
 
-[[Follow one of them|StrawHouse]]</tw-passagedata><tw-passagedata pid="7" name="StrawHouse" tags="" position="600,700" size="100,100">The Wolf finds The Little Pig entering a Straw House and decides blow it away. The Little Pig is terrified to see the Wolf and he tries to distract him by offering him a Pie. The Wolf:
+[[Follow one of them|StrawHouse]]</tw-passagedata><tw-passagedata pid="7" name="StrawHouse" tags="TLP" position="600,700" size="100,100">The Wolf finds The Little Pig entering a Straw House and decides blow it away. The Little Pig is terrified to see the Wolf and he tries to distract him by offering him a Pie. The Wolf:
 
 [[Refuses it and runs after the the Little Pig |WoodHouse]]
-[[(set: $pie to true)Accepts it and leaves the Pig alone |Fence2]]</tw-passagedata><tw-passagedata pid="8" name="WoodHouse" tags="" position="1000,700" size="100,100">The Wolf finds the Wood House and he can cleary hear two Little Pigs inside talking about this party. He&#39;s still hungry and tries to blow up their house without success. Then he decides to:
+[[(set: $pie to true)Accepts it and leaves the Pig alone |Fence2]]</tw-passagedata><tw-passagedata pid="8" name="WoodHouse" tags="TLP" position="1000,700" size="100,100">The Wolf finds the Wood House and he can cleary hear two Little Pigs inside talking about this party. He&#39;s still hungry and tries to blow up their house without success. Then he decides to:
 
 (if: $matchbox is true)
 [
@@ -49,10 +95,10 @@ The Wolf is hungry, so he decides to:
 (else:)
 [
 [[Give up and go after Peter|Fence3]]
-]</tw-passagedata><tw-passagedata pid="9" name="BrickHouse" tags="" position="1400,700" size="100,100">The Wolf finally gets to this Brick House which looks like the house where the Three Little Pigs were having their party. He&#39;s not sure if they are inside, as the windows are closed and the door is locked. All this running back and forth has got him really tired. At last, he looks up and decides to go up the roof and:
+]</tw-passagedata><tw-passagedata pid="9" name="BrickHouse" tags="TLP" position="1400,700" size="100,100">The Wolf finally gets to this Brick House which looks like the house where the Three Little Pigs were having their party. He&#39;s not sure if they are inside, as the windows are closed and the door is locked. All this running back and forth has got him really tired. At last, he looks up and decides to go up the roof and:
 
 [[Enter the chimney.|InsideBrickHouse]] 50% needs revision
-[[Enter the chimney.|InsideGranHouse]] 50% needs revision</tw-passagedata><tw-passagedata pid="10" name="Fence1" tags="" position="300,450" size="100,100">As The Wolf approaches the fence with the sheep, he notices a boy nearby. He recognizes this boy: it&#39;s Peter, he used to throw rocks at him. While observing Peter he thinks to himself that the boy would be a much better meal!
+[[Enter the chimney.|InsideGranHouse]] 50% needs revision</tw-passagedata><tw-passagedata pid="10" name="Fence1" tags="PAW" position="300,450" size="100,100">As The Wolf approaches the fence with the sheep, he notices a boy nearby. He recognizes this boy: it&#39;s Peter, he used to throw rocks at him. While observing Peter he thinks to himself that the boy would be a much better meal!
 
 He tries to get near him, but before he can come too close Peter screams for help.
 
@@ -60,7 +106,7 @@ The Wolf:
 [[Runs Away|LRH]] 50% needs revision
 [[Runs Away|TLP]] 50% needs revision
 
-[[Eats Peter|GameOverPAW]]</tw-passagedata><tw-passagedata pid="11" name="Fence2" tags="" position="900,450" size="100,100">The Wolf sees Peter again, who start screaming for help.
+[[Eats Peter|GameOverPAW]]</tw-passagedata><tw-passagedata pid="11" name="Fence2" tags="PAW" position="900,450" size="100,100">The Wolf sees Peter again, who start screaming for help.
 Last time, he ran away, but this time
 The Wolf:
 
@@ -68,30 +114,30 @@ The Wolf:
 [[Runs Away Again |WoodHouse]] 50% needs revision
 
 [[Eats Peter|GameOverPAW]] 50% needs revision
-[[Eats Peter|WinPAW]] 50% needs revision</tw-passagedata><tw-passagedata pid="12" name="Fence3" tags="" position="1300,450" size="100,100">The Wolf sees Peter again, who starts screaming for help.
+[[Eats Peter|WinPAW]] 50% needs revision</tw-passagedata><tw-passagedata pid="12" name="Fence3" tags="PAW" position="1300,450" size="100,100">The Wolf sees Peter again, who starts screaming for help.
 Last time, he ran away, but this time the Wolf:
 
 [[Still leaves him alone and Runs Away |GranHouse]] 50% needs revision
 [[Still leaves him alone and Runs Away |BrickHouse]] 50% needs revision
 
 [[Eats Peter|GameOverPAW]] 50% needs revision
-[[Eats Peter|WinPAW]] 50% needs revision</tw-passagedata><tw-passagedata pid="13" name="GetPeter" tags="" position="1900,450" size="100,100">Wearing his new disguise the Wolf is able to get closer to Peter without him suspecting of anything. The Wolf is extremely hungry at this point and so he jumps to:
+[[Eats Peter|WinPAW]] 50% needs revision</tw-passagedata><tw-passagedata pid="13" name="GetPeter" tags="PAW" position="1900,450" size="100,100">Wearing his new disguise the Wolf is able to get closer to Peter without him suspecting of anything. The Wolf is extremely hungry at this point and so he jumps to:
 
-[[Eat Peter!|WinPAW]]</tw-passagedata><tw-passagedata pid="14" name="GameOverPAW" tags="" position="600,450" size="100,100">The vilagers heard Peter crying for help and came to his rescue.
+[[Eat Peter!|WinPAW]]</tw-passagedata><tw-passagedata pid="14" name="GameOverPAW" tags="PAW" position="600,450" size="100,100">The vilagers heard Peter crying for help and came to his rescue.
 
 Before The Wolf was able to eat Peter they capture him and lock him in a cage where he starves to death.
 
-GAMEOVER</tw-passagedata><tw-passagedata pid="15" name="InsideBrickHouse" tags="" position="1600,700" size="100,100">The Wolf lands inside the Brick House and the Three Little Pigs were still preparing the party in the kitchen. While he is making his way, tip tap toeing he notices a huge sheep skin coat. He thinks to himself that this could allow him to finnally get close to Peter without him screaming for help. Faced with this option he decides to: 
+GAMEOVER</tw-passagedata><tw-passagedata pid="15" name="InsideBrickHouse" tags="TLP" position="1600,700" size="100,100">The Wolf lands inside the Brick House and the Three Little Pigs were still preparing the party in the kitchen. While he is making his way, tip tap toeing he notices a huge sheep skin coat. He thinks to himself that this could allow him to finnally get close to Peter without him screaming for help. Faced with this option he decides to: 
 
 [[Eat the Three Little Pigs|WinTLP]]
-[[Grab the coat and go after Peter|GetPeter]]</tw-passagedata><tw-passagedata pid="16" name="GameOverRH" tags="" position="699,50" size="100,100">Little Red Hood takes the mushroom path and arrives to grandmother&#39;s house before The Wolf.
+[[Grab the coat and go after Peter|GetPeter]]</tw-passagedata><tw-passagedata pid="16" name="GameOverRH" tags="LRH" position="699,50" size="100,100">Little Red Hood takes the mushroom path and arrives to grandmother&#39;s house before The Wolf.
 There is no way for The Wolf to get inside now, and he starves to death.
 
-GAME OVER</tw-passagedata><tw-passagedata pid="17" name="WinPAW" tags="" position="1100,450" size="100,100">The villagers didn&#39;t came to rescue Peter this time and The Wolf finally gets him!
+GAME OVER</tw-passagedata><tw-passagedata pid="17" name="WinPAW" tags="PAW" position="1100,450" size="100,100">The villagers didn&#39;t came to rescue Peter this time and The Wolf finally gets him!
 
 After this propper meal he&#39;s ready to have some rest in the mountain.
 
-WIN</tw-passagedata><tw-passagedata pid="18" name="DecoyRH" tags="" position="1000,200" size="100,100">The Wolf finds his way to grandmother&#39;s house but he can cleary hear Little Red Hood approaching. He&#39;s still hungry but he can&#39;t go to grandmother&#39;s house at the same time as Little Red Hood. Then he decides to:
+WIN</tw-passagedata><tw-passagedata pid="18" name="DecoyRH" tags="LRH" position="1000,200" size="100,100">The Wolf finds his way to grandmother&#39;s house but he can cleary hear Little Red Hood approaching. He&#39;s still hungry but he can&#39;t go to grandmother&#39;s house at the same time as Little Red Hood. Then he decides to:
 
 (if: $pie is true)
 [
@@ -101,7 +147,7 @@ WIN</tw-passagedata><tw-passagedata pid="18" name="DecoyRH" tags="" position="10
 (else:)
 [
 [[Go after Peter once again|Fence3]]
-]</tw-passagedata><tw-passagedata pid="19" name="InsideGranHouse" tags="" position="1600,200" size="100,100">The Wolf lands inside the Grandmother&#39;s House while she is still preparing some tea in the kitchen. The Wolf cathes her by surpise and eats her.
+]</tw-passagedata><tw-passagedata pid="19" name="InsideGranHouse" tags="LRH" position="1600,200" size="100,100">The Wolf lands inside the Grandmother&#39;s House while she is still preparing some tea in the kitchen. The Wolf cathes her by surpise and eats her.
 Sudenly the Wolf hears Little Red Hood aproaching the house and he thinks about using the granmother&#39;s clothes to disguise himself and trick Little Red Hood.
 
 The Little Red Hood enters the house and heads straight to the Wolf, now disguuesed as grandmother. Even thoug she was wering her normal clothes, Little Red Hood felt that something wasn&#39;t quite right. So she decided to ask the grandmother:
@@ -115,13 +161,13 @@ The WOlf replies:
 The Wolf, thought for a secound and replied:
 
 [[- It is to eat the food that I am about to cook for us!|WinLRH]]
-[[- The better to eat you, my dear!|ChaseLRH]]</tw-passagedata><tw-passagedata pid="20" name="WinTLP" tags="" position="1900,700" size="100,100">After eating the Three Little Pigs, the Wolf finally gets a propper meal and goes to rest in the livingroom couch.
+[[- The better to eat you, my dear!|ChaseLRH]]</tw-passagedata><tw-passagedata pid="20" name="WinTLP" tags="TLP" position="1900,700" size="100,100">After eating the Three Little Pigs, the Wolf finally gets a propper meal and goes to rest in the livingroom couch.
 
-WIN</tw-passagedata><tw-passagedata pid="21" name="WinLRH" tags="" position="1900,200" size="100,100">Fooling Little Red Hood into helping him to prepare a big bowl of soup with the ingredients that she brought him, he pushes her inside while she is mixing the soup.
+WIN</tw-passagedata><tw-passagedata pid="21" name="WinLRH" tags="LRH" position="1900,200" size="100,100">Fooling Little Red Hood into helping him to prepare a big bowl of soup with the ingredients that she brought him, he pushes her inside while she is mixing the soup.
 
 The Wolf finally gets a propper meal and goes to rest in the gradnmother&#39;s bed.
 
-WIN</tw-passagedata><tw-passagedata pid="22" name="ChaseLRH" tags="" position="1750,350" size="100,100">Litle Red Hood realizes the grandmother was the Wolf in disguse and runs away.
+WIN</tw-passagedata><tw-passagedata pid="22" name="ChaseLRH" tags="LRH" position="1750,350" size="100,100">Litle Red Hood realizes the grandmother was the Wolf in disguse and runs away.
 
 The Wolf tries to chase her, but she is too fast for him.
 
