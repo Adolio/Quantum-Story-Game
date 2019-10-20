@@ -14,6 +14,7 @@ from api import qasm, statevector, measurement
 
 app = Flask(__name__)
 
+CIRCUIT_DIMENSION = "1,5"  # hard code circuit dimension
 
 @app.route('/')
 def welcome():
@@ -33,10 +34,10 @@ def run_qasm():
     return jsonify(ret)
 
 
-@app.route('/api/run/get_statevector', methods=['POST'])
+@app.route('/api/run/get_statevector', methods=['Get'])
 def get_statevector():
-    circuit_dimension = request.form.get('circuit_dimension')
-    gate_string = request.form.get('gate_array')
+    circuit_dimension = CIRCUIT_DIMENSION
+    gate_string = request.args['gate_array']
     print("--------------")
     print(gate_string)
 
@@ -44,14 +45,15 @@ def get_statevector():
     return reply
 
 
-@app.route('/api/run/do_measurement', methods=['POST'])
+@app.route('/api/run/do_measurement', methods=['Get'])
 def do_measurement():
-    circuit_dimension = request.form.get('circuit_dimension')
-    gate_string = request.form.get('gate_array')
+    circuit_dimension = CIRCUIT_DIMENSION
+    shot_num = request.args['shot_num']
+    gate_string = request.args['gate_array']
     print("--------------")
     print(gate_string)
 
-    reply = measurement(circuit_dimension, gate_string)
+    reply = measurement(circuit_dimension, gate_string, shot_num)
     return reply
 
 
