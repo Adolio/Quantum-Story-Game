@@ -48,12 +48,11 @@ def get_statevector():
 @app.route('/api/run/do_measurement', methods=['Get'])
 def do_measurement():
     circuit_dimension = CIRCUIT_DIMENSION
-    shot_num = request.args['shot_num']
     gate_string = request.args['gate_array']
     print("--------------")
     print(gate_string)
 
-    reply = measurement(circuit_dimension, gate_string, shot_num)
+    reply = measurement(circuit_dimension, gate_string)
     return reply
 
 
