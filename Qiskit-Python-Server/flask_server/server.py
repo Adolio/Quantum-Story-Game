@@ -9,12 +9,14 @@ sys.path.append(project_path)
 from flask import request
 from flask import jsonify
 from flask import Flask
+from flask_cors import CORS
 
 from api import qasm, statevector, measurement
 
 app = Flask(__name__)
+CORS(app)
 
-CIRCUIT_DIMENSION = "1,5"  # hard code circuit dimension
+CIRCUIT_DIMENSION = "1,3"  # hard code circuit dimension
 
 @app.route('/')
 def welcome():

@@ -37,6 +37,9 @@ def measurement(circuit_dimension, gate_string):
     measure_circuit = deepcopy(circuit)  # make a copy of circuit
     measure_circuit.add_register(cr)  # add classical registers for measurement readout
     measure_circuit.measure(measure_circuit.qregs[0], measure_circuit.cregs[0])
+
+    print(measure_circuit.draw())
+
     job_sim = execute(measure_circuit, backend_sv_sim, shots=shot_num)
     result_sim = job_sim.result()
     counts = result_sim.get_counts(circuit)
@@ -44,6 +47,7 @@ def measurement(circuit_dimension, gate_string):
     state_in_decimal = int(list(counts.keys())[0], 2)
 
     return str(state_in_decimal)
+    #return counts
 
 
 def circuit_from_string(circuit_dimension, gate_string):
@@ -54,6 +58,7 @@ def circuit_from_string(circuit_dimension, gate_string):
     for i in range(row_max):
         for j in range(column_max):
             index = i * column_max + j
+            print(gate_array[index])
             node = CircuitGridNode(node_types.IDEN)
             if gate_array[index] == 'X':
                 node = CircuitGridNode(node_types.X)
